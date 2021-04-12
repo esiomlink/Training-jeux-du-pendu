@@ -1,20 +1,22 @@
-import React from "react";
-
+import React from 'react';
 
 const Keyboard = (props) => {
-  const {alphabet , setAlphabet} = props
-  console.log(alphabet , );
-  
-  
+  const { alphabet, setAlphabet } = props;
+  function handleClick (index){
+
+    const newAlphabet = [...alphabet];
+          newAlphabet[index].letter = '#'
+          setAlphabet(newAlphabet)
+  }
+
   return (
     <div>
-      {alphabet
-      .map((letters, key) => {
+      {alphabet.map((letter, key) => {
         return (
-           <button 
-           onClick={() => setAlphabet([...alphabet,{...letters.letter="#"}])}
-           >
-            {letters.letter}
+          <button
+            onClick={()=>handleClick(key)}
+          >
+            {letter.letter}
           </button>
         );
       })}
