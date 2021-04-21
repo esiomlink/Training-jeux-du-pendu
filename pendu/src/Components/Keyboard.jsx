@@ -1,26 +1,18 @@
-import React from 'react';
-
+import './style/Keyboard.css';
 const Keyboard = (props) => {
-  const { alphabet, setAlphabet } = props;
-  function handleClick (index){
-
-    const newAlphabet = [...alphabet];
-          newAlphabet[index].letter = '#'
-          setAlphabet(newAlphabet)
-  }
+  const { alphabet, handleClick } = props;
 
   return (
-    <div>
-      {alphabet.map((letter, key) => {
+    <section className='keyboard-container'>
+      {alphabet.map((letter, index) => {
         return (
-          <button
-            onClick={()=>handleClick(key)}
-          >
+          <button onClick={() => handleClick(index)}>
             {letter.letter}
+            {letter.inWord}
           </button>
         );
       })}
-    </div>
+    </section>
   );
 };
 

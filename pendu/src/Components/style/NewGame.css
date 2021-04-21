@@ -1,0 +1,13 @@
+.new-game-container{
+margin-top: 2rem;
+}
+
+
+
+.btn-game{
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 9999px;
+  background-color: #EC6A32;
+  cursor: pointer;
+}

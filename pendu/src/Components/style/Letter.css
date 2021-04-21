@@ -1,0 +1,15 @@
+.find-word{
+  display: flex;
+  border: 1px solid;
+  justify-content: center;
+  
+}
+.letter{
+  border: 1px solid;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+
